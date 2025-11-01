@@ -7,8 +7,10 @@
     <!-- bean definitions here -->
 <!--    <bean id="developer1" class="com.rahul.Developer" scope="prototype"/>-->
     <bean id="developer1" class="com.rahul.Developer" scope="singleton">
-        <constructor-arg value="25"/>
-        <constructor-arg ref="lap1"/>
+        <!--    Used ref variable first to highlight the use of index    -->
+        <constructor-arg index="1" ref="lap1"/>
+        <constructor-arg index="0" value="25"/>
+
         <property name="age" value="29"/>
         <property name="lap" ref="lap1"/>
     </bean> <!-- by default it will be singleton even if we don't mention -->
