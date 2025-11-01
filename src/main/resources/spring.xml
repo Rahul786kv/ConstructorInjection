@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="developer1" class="com.rahul.Developer" scope="prototype"/>-->
+    <bean id="developer1" class="com.rahul.Developer" scope="singleton">
+        <constructor-arg value="25"/>
+        <constructor-arg ref="lap1"/>
+        <property name="age" value="29"/>
+        <property name="lap" ref="lap1"/>
+    </bean> <!-- by default it will be singleton even if we don't mention -->
+<!--    <bean id="developer2" class="com.rahul.Developer"/>-->
+    <bean id="lap1" class="com.rahul.Laptop"/>
+
+</beans>
