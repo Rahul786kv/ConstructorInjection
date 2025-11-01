@@ -5,7 +5,7 @@ import java.beans.ConstructorProperties;
 public class Developer {
 
     private int age;
-    private Laptop lap;
+    private Computer com;
     public Developer(){
         System.out.println("Developer default constructor called and default object created");
     }
@@ -14,14 +14,14 @@ public class Developer {
         System.out.println("Developer age param object created");
     }
 
-    @ConstructorProperties({"age", "lap"})
-    public Developer(int age, Laptop lap){
-        System.out.println("Parameterized Developer constructor called");
-    }
+//    @ConstructorProperties({"age", "lap"})
+//    public Developer(int age, Laptop lap){
+//        System.out.println("Parameterized Developer constructor called");
+//    }
 
     public void code(){
         System.out.println("Coding");
-        lap.compile();
+        com.compile();
     }
 
     public int getAge() {
@@ -32,11 +32,19 @@ public class Developer {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
+
+    //    public Laptop getLap() {
+//        return lap;
+//    }
+//
+//    public void setLap(Laptop lap) {
+//        this.lap = lap;
+//    }
 }

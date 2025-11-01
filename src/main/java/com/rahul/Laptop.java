@@ -1,6 +1,6 @@
 package com.rahul;
 
-public class Laptop {
+public class Laptop implements Computer {
     int age;
     public Laptop(){
         System.out.println("Laptop object created");
@@ -11,7 +11,8 @@ public class Laptop {
         this.age = age;
     }
 
+    @Override
     public void compile() {
-        System.out.println("Compilation successful");
+        System.out.println("Compiling using Laptop");
     }
 }
