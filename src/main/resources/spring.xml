@@ -7,9 +7,17 @@
     <!-- bean definitions here -->
 <!--    <bean id="developer1" class="com.rahul.Developer" scope="prototype"/>-->
     <bean id="developer1" class="com.rahul.Developer" scope="singleton">
+<!--        Commenting below arguments as indexing is a great choice-->
+<!--        <constructor-arg type="com.rahul.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type="int" value="25"/>-->
+
         <!--    Used ref variable first to highlight the use of index    -->
-        <constructor-arg index="1" ref="lap1"/>
-        <constructor-arg index="0" value="25"/>
+<!--        <constructor-arg index="1" ref="lap1"/>-->
+<!--        <constructor-arg index="0" value="25"/>-->
+
+        <!-- Directly using name -->
+        <constructor-arg name="lap" ref="lap1"/>
+        <constructor-arg name="age" value="25"/>
 
         <property name="age" value="29"/>
         <property name="lap" ref="lap1"/>

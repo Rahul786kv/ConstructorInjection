@@ -1,5 +1,7 @@
 package com.rahul;
 
+import java.beans.ConstructorProperties;
+
 public class Developer {
 
     private int age;
@@ -12,6 +14,7 @@ public class Developer {
         System.out.println("Developer age param object created");
     }
 
+    @ConstructorProperties({"age", "lap"})
     public Developer(int age, Laptop lap){
         System.out.println("Parameterized Developer constructor called");
     }
