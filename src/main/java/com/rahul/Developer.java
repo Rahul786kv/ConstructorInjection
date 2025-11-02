@@ -7,7 +7,7 @@ public class Developer {
     private int age;
     private Computer com;
     public Developer(){
-        System.out.println("Developer default constructor called and default object created");
+        System.out.println("Developer object created");
     }
 
     public Developer(int age){

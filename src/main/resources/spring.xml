@@ -6,7 +6,8 @@
 
     <!-- bean definitions here -->
 <!--    <bean id="developer1" class="com.rahul.Developer" scope="prototype"/>-->
-    <bean id="developer1" class="com.rahul.Developer" scope="singleton" autowire="byName">
+<!--    <bean id="developer1" class="com.rahul.Developer" scope="singleton" autowire="byName">-->
+    <bean id="developer1" class="com.rahul.Developer" scope="singleton" autowire="byType">
 <!--        Commenting below arguments as indexing is a great choice-->
 <!--        <constructor-arg type="com.rahul.Laptop" ref="lap1"/>-->
 <!--        <constructor-arg type="int" value="25"/>-->
@@ -20,11 +21,16 @@
 <!--        <constructor-arg name="age" value="25"/>-->
 
         <property name="age" value="29"/>
-<!--        <property name="com" ref="com"/>-->
+        <property name="com" ref="com2"/>
 <!--        <property name="lap" ref="lap1"/>-->
 
     </bean> <!-- by default it will be singleton even if we don't mention -->
 <!--    <bean id="developer2" class="com.rahul.Developer"/>-->
 <!--    <bean id="lap1" class="com.rahul.Laptop"/>-->
-    <bean id="com" class="com.rahul.Desktop"/>
+<!--    <bean id="com" class="com.rahul.Desktop"/>-->
+<!--    <bean id="com" class="com.rahul.Laptop"/>-->
+    <bean class="com.rahul.Desktop" lazy-init="true"/>
+<!--    <bean id="com1" class="com.rahul.Desktop" lazy-init="true"/>-->
+    <bean id="com2" class="com.rahul.Laptop" primary="true"/>
+
 </beans>
