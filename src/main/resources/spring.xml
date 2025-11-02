@@ -21,8 +21,11 @@
 <!--        <constructor-arg name="age" value="25"/>-->
 
         <property name="age" value="29"/>
-        <property name="com" ref="com2"/>
+<!--        <property name="com" ref="com2"/>-->
 <!--        <property name="lap" ref="lap1"/>-->
+        <property name="com" >
+            <bean id="com2" class="com.rahul.Laptop" primary="true"/>
+        </property>
 
     </bean> <!-- by default it will be singleton even if we don't mention -->
 <!--    <bean id="developer2" class="com.rahul.Developer"/>-->
@@ -31,6 +34,6 @@
 <!--    <bean id="com" class="com.rahul.Laptop"/>-->
     <bean class="com.rahul.Desktop" lazy-init="true"/>
 <!--    <bean id="com1" class="com.rahul.Desktop" lazy-init="true"/>-->
-    <bean id="com2" class="com.rahul.Laptop" primary="true"/>
+<!--    <bean id="com2" class="com.rahul.Laptop" primary="true"/>-->
 
 </beans>
